@@ -131,6 +131,10 @@ public class ArrayADT {
         }
     }
     public void lshift(int sno) {
+        /**
+         * Left shift array by s times
+         * One at a time
+         * */
         int s = 0;
         while (s<sno) {
             int t = array[0];
@@ -142,6 +146,10 @@ public class ArrayADT {
         }
     }
     public void rshift(int sno) {
+        /**
+         * Right shift array by s times
+         * One at a time
+         * */
         int s = 0;
         while(s<sno) {
             int t = array[LENGTH-1];
