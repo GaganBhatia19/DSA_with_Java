@@ -132,7 +132,7 @@ public class ArrayADT {
     }
     public void lshift(int sno) {
         /**
-         * Left shift array by s times
+         * Left shift array by s number of times
          * One at a time
          * */
         int s = 0;
