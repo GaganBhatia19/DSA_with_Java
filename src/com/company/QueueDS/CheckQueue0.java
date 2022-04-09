@@ -61,6 +61,7 @@ public class CheckQueue0 {
 
          */
 
+        /*
         // DEQueue
         Queue4_DEQueue dequeue = new Queue4_DEQueue(5);
         dequeue.enqueueRear(12);
@@ -76,5 +77,20 @@ public class CheckQueue0 {
 
         dequeue.dequeueRear();
         dequeue.display();
+
+         */
+
+        // Implementing queue using 2 Stack
+        Queue6_ImpUsing2Stack queue = new Queue6_ImpUsing2Stack();
+        queue.enqueue(12);
+        queue.enqueue(23);
+        queue.enqueue(62);
+        queue.enqueue(45);
+
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
     }
 }
