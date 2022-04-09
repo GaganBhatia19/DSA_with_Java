@@ -37,6 +37,7 @@ public class CheckQueue0 {
         queue.display();
          */
 
+        /*
         // Queue using LinkedList
         Queue3_ImpUsingLinkedList queue = new Queue3_ImpUsingLinkedList();
         queue.enqueue(12);
@@ -58,5 +59,22 @@ public class CheckQueue0 {
 
         queue.display();
 
+         */
+
+        // DEQueue
+        Queue4_DEQueue dequeue = new Queue4_DEQueue(5);
+        dequeue.enqueueRear(12);
+        dequeue.enqueueRear(53);
+        dequeue.enqueueRear(35);
+        dequeue.display();
+
+        dequeue.enqueueFront(99);
+        dequeue.display();
+
+        dequeue.dequeueFront();
+        dequeue.display();
+
+        dequeue.dequeueRear();
+        dequeue.display();
     }
 }
