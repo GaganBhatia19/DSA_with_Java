@@ -20,16 +20,16 @@ class BinaryTreeNodeUserClass{
         System.out.print("Enter root node: ");
         int rootData = scanner.nextInt();
         BinaryTreeNode<Integer> rootNode = new BinaryTreeNode<>(rootData);
-        deque.offerLast(rootNode);
-
+        deque.offerLast(rootNode); // enqueuing root element reference to queue from tail
+        // check if queue is empty
         while(!deque.isEmpty()){
-            BinaryTreeNode<Integer> nodeFromQueue = deque.pollFirst();
+            BinaryTreeNode<Integer> nodeFromQueue = deque.pollFirst(); //take out element from head
             System.out.print("Enter left child of node "+nodeFromQueue.data+" : ");
             int leftData = scanner.nextInt();
-            if(leftData!=-1){
+            if(leftData!=-1){ // if it's -1 then don't take it further
                 BinaryTreeNode<Integer> leftNode = new BinaryTreeNode<>(leftData);
-                nodeFromQueue.left = leftNode;
-                deque.offerLast(leftNode);
+                nodeFromQueue.left = leftNode; // address to leftnode filling in the element which we have taken out form queue
+                deque.offerLast(leftNode);// adding the particular address of node to the queue
             }
 
             System.out.print("Enter right child of node "+nodeFromQueue.data+" : ");
