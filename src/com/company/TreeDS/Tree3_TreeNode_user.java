@@ -1,5 +1,6 @@
 package com.company.TreeDS;
 
+import javax.swing.tree.TreeNode;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -38,6 +39,8 @@ public class Tree3_TreeNode_user {
             }
         }
         preorder(rootNode);
+        System.out.println();
+        postorder(rootNode);
     }
     public static void preorder(TreeNodeC node){
         if(node!=null){
@@ -47,4 +50,12 @@ public class Tree3_TreeNode_user {
             }
         }
     }
+    public static void postorder(TreeNodeC node){
+        if(node!=null){
+            for (int i=0;i<node.children.size();i++)
+                postorder((TreeNodeC) node.children.get(i));
+            System.out.print(node.data+" ");
+        }
+    }
+
 }
