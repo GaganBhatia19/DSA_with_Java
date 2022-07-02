@@ -41,6 +41,8 @@ public class Tree3_TreeNode_user {
         preorder(rootNode);
         System.out.println();
         postorder(rootNode);
+        System.out.println();
+        inorder(rootNode);
     }
     public static void preorder(TreeNodeC node){
         if(node!=null){
@@ -57,5 +59,33 @@ public class Tree3_TreeNode_user {
             System.out.print(node.data+" ");
         }
     }
-
+    public static void inorder(TreeNodeC node){
+        if(node!=null){
+            int total = node.children.size();
+            // consider all except last
+            for (int i=0;i<total-1;i++){
+                inorder((TreeNodeC) node.children.get(i));
+            }
+            System.out.print(node.data+" ");
+            // considering the last element
+            if(total!=0)
+            inorder((TreeNodeC) node.children.get(total-1));
+        }
+    }
 }
+/*
+* OUTPUT
+Enter root node: 4
+Enter 0th child of 4: 2
+Enter 1th child of 4: 3
+Enter 2th child of 4: 5
+Enter 3th child of 4: -1
+Enter 0th child of 2: -1
+Enter 0th child of 3: 6
+Enter 1th child of 3: -1
+Enter 0th child of 5: -1
+Enter 0th child of 6: -1
+4 2 3 6 5
+2 6 3 5 4
+2 3 6 4 5
+* */
