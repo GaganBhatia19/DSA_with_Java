@@ -68,3 +68,14 @@ public class Tree7_Levelorder_traversal {
         }
     }
 }
+/*
+OUTPUT
+Enter root node: 8
+Enter left child of node 8 : 3
+Enter right child of node 8 : 9
+Enter left child of node 3 : -1
+Enter right child of node 3 : -1
+Enter left child of node 9 : -1
+Enter right child of node 9 : -1
+8 3 9
+* */
